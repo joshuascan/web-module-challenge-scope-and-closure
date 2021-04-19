@@ -31,6 +31,8 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   2. Which of the two uses a closure? How can you tell?
   
+    counter1. It has the function "counter" within the outer function "counterMaker" and pulls the "count" variable from the outer function.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
 */
@@ -52,6 +54,8 @@ function counter2() {
   return count++;
 }
 
+console.log(counter1());
+console.log(counter2());
 
 /* ⚾️⚾️⚾️ Task 2: inning() ⚾️⚾️⚾️
 Use the inning function below to do the following:
@@ -62,10 +66,9 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(team){
+    return Math.floor(Math.random() * 3);
 }
-
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:
