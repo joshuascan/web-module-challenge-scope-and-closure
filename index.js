@@ -28,13 +28,18 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+
+    counter1 declares "count" within the function while counter2 declares it outside of the function.
   
   2. Which of the two uses a closure? How can you tell?
   
-    counter1. It has the function "counter" within the outer function "counterMaker" and pulls the "count" variable from the outer function.
+    counter1. It has the function "counter" within the outer function "counterMaker". "counter" then pulls the "count" variable from the outer function.
 
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+     counter1 would be preferable if you want to be able to use the variable "count" in other functions. counter2 would be preferable if you want "counter" to be solely attached to the counter function.
+
 */
 
 // counter1 code
